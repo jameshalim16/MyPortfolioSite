@@ -175,7 +175,7 @@ a{
 .accordion-experience{
   position:relative;
   width: 100%;
-  color: rgba(48, 69, 91, 1);
+  color: #6cace4;
   margin-top: 2rem;
 }
 
@@ -242,7 +242,7 @@ a{
   font-size: 14px;
   margin: 16px 0 16px 0;
   letter-spacing: 1px;
-  opacity: .8;
+  /* opacity: .8; */
 }
 
 .title-experience{
@@ -427,7 +427,7 @@ footer .box-contact{
   /* Experince */
   .accordion-experience{
     width: 100%;
-    color: rgba(48, 69, 92,1);
+    color: #6cace4;
     margin-top: 3rem;
   }
 
@@ -499,6 +499,24 @@ footer .box-contact{
 
   .box-contact .contact:hover p{
     font-size: 1.2rem;
+  }
+
+
+  .footer-bottom{
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .footer-bottom p{
+    font-weight: 200;
+    font-size: 14px;
+    color: #b6b6b6;
+    margin: 3px;
   }
 
 }
