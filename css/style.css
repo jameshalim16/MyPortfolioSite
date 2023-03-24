@@ -45,6 +45,32 @@ a{
   margin-right: 1.5rem;
 }
 
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1024px;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.grid {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
 /* Header */
 
 .header{
@@ -75,7 +101,7 @@ a{
 }
 
 @media screen and (max-width:767px) {
- .nav-menu{
+  .nav-menu{
     position: fixed;
     background-color: #000000;
     width: 100%;
@@ -86,7 +112,7 @@ a{
     z-index: 100;
     padding: 4rem 0 0 3rem;
     transition: .3s;  
- } 
+  } 
 }
 
 .nav-close{
@@ -274,10 +300,9 @@ a{
   margin-bottom: 50px;
 }
 
-.featured-project h4{
-  font-family: var(--font-primary);
+.featured-project h3{
   font-weight: 300;
-  text-transform: uppercase;
+  letter-spacing: .2rem;
 }
 
 .box-featured-projects{
@@ -317,6 +342,128 @@ a{
 
 .box-featured-projects .project .p-tech{
   color: #6cace4;
+}
+
+
+/* Petto Project Styling */
+
+.header-container-petto {
+  padding: 24px 180px;
+  margin: 220px auto 0px;
+  padding-bottom: 100px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.petto-banner{
+  /* max-width: 1440px; */
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.container-medium-petto{
+  max-width: 720px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.container-medium-petto h3{
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+/* .container-medium-petto p{
+  margin-top: 50px;
+  font-size: 2rem;
+} */
+
+.project-description-large{
+  margin-top: 50px;
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+.petto-role-container p{
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.project-showcase-container-grid{
+  padding: 4rem 0 1rem;
+  row-gap: 8.5rem;
+}
+
+.project-info{
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.project-showcase-images{
+  position: relative;
+  width: 310px;
+  justify-self: center;
+}
+
+.project-showcase-images img:nth-child(1){
+  width: 224px;
+  position: absolute;
+  right: -1.5rem;
+  top: -9.5rem;
+}
+
+.project-showcase-images img:nth-child(2){
+  width: 180px;
+  margin-left: .5rem;
+  position: relative;
+}
+
+/*=============== HOME ===============*/
+.home {
+  /* background-color: #FAF7F3; */
+  overflow: hidden;
+}
+
+.home__container {
+  padding: 4rem 0 1rem;
+  row-gap: 8.5rem;
+}
+
+.home__title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 10rem;
+}
+
+.home__description {
+  color: lightgray;
+  margin: 1rem 0 2rem;
+}
+
+.home__title, 
+.home__description {
+  line-height: 140%;
+}
+
+.home__images {
+  position: relative;
+  width: 310px;
+  justify-self: center;
+}
+
+.home__images img:nth-child(1) {
+  width: 224px;
+  position: absolute;
+  right: -5.5rem;
+  top: -9.5rem;
+  transition: transform 0.2s ease-out;
+}
+
+.home__images img:nth-child(2) {
+  width: 180px;
+  margin-left: 2rem;
+  position: relative;
+  transition: transform 0.2s ease-out;
 }
 
 /* Footer */
@@ -385,10 +532,13 @@ footer .box-contact{
   justify-content: center;
 }
 
+/* Media Queries */
+
 @media screen and (min-width: 767px) {
+
   /* Base */
 
-  .container, .container-medium{
+  .container, .container-medium, .container-medium-petto{
     margin-left: auto;
     margin-right: auto;
   }
@@ -485,6 +635,19 @@ footer .box-contact{
     transform: scale(1.02)
   }
 
+
+  /* Petto */
+
+  .home__container{
+      grid-template-columns: repeat(2, max-content);
+      justify-content: center;
+  }
+
+  .home__images {
+      margin-top: 6rem;
+  }
+
+
   /* Footer */
 
   footer .container-medium .box-contact{
@@ -517,6 +680,30 @@ footer .box-contact{
     font-size: 14px;
     color: #b6b6b6;
     margin: 3px;
+  }
+
+}
+
+@media screen and (min-width: 1124px) {
+
+  .home__container {
+      padding: 10rem 0 3rem;
+      column-gap: 0;
+  }
+
+  .home__images {
+      width: 500px;
+      margin-top: 8rem;
+      transform: translate(-1rem);
+  }
+
+  .home__images img:nth-child(1) {
+      width: 345px;
+      top: -14.5rem;
+  }
+
+  .home__images img:nth-child(2) {
+      width: 277px;
   }
 
 }
