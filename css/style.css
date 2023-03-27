@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+
 
 :root{
   --font-primary: 'Inter', sans-serif;
@@ -13,7 +16,6 @@
   padding: 0;
   margin: 0;
 }
-
 
 html{
   scroll-behavior: smooth;
@@ -33,6 +35,11 @@ a{
   text-decoration: none;
 }
 
+h3 {
+  font-weight: 300;
+  letter-spacing: .2rem;
+}
+
 .container{
   max-width: 1280px;
   margin-left: 1.5rem;
@@ -44,6 +51,20 @@ a{
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
+
+.container-medium-project{
+  margin-top: 100px;
+  max-width: 968px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 100px;
+}
+
+.whitespace {
+  width: 100%;
+  height: 100px;
+}
+
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -295,7 +316,7 @@ a{
 
 /* Project */
 
-.featured-project .container-medium hr{
+/* .featured-project .container-medium hr{
   border-color: #c6c6c6;
   margin-bottom: 50px;
 }
@@ -342,6 +363,124 @@ a{
 
 .box-featured-projects .project .p-tech{
   color: #6cace4;
+} */
+
+h6 {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-lg-4{
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-lg-6{
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-lg-8{
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.vertical {
+  margin-top: 40px;
+  border-left: 1px solid #fff;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+}
+
+.project {
+  height: 500px;
+}
+
+.project1 {
+  background: url(/img/project1-thumbnail.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project1::after{
+  content: "Petto: Mobile App";
+  /* font-family: "Roboto Mono"; */
+  font-size: 26px;
+  position: relative;
+  color: #fff;
+  display: block;
+  top: 50%;
+  left: -90%;
+  right: 0;
+  bottom: 0;
+}
+
+.project1 p{
+  position: relative;
+}
+
+.project2{
+  background: url(/img/project2-thumbnail.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project2::after {
+  content: "Discord Tabs";
+  /* font-family: "Roboto Mono"; */
+  font-size: 26px;
+  position: relative;
+  color: #fff;
+  display: block;
+  top: 60%;
+  left: 90%;
+  right: 0;
+  bottom: 0;
+}
+
+
+@media(max-width: 767px) {
+  .project {
+        width: 90% !important;
+        margin: 14px auto;
+  }
+
+  .vertical {
+        display: none;
+  }
+
+  .project1::after, .project2::after, .project3::after, .project4::after {
+        display: none;
+  }
+}
+@media (min-width: 767px){
+
+  .col-lg-4{
+    flex: 0 0 33%;
+    max-width: 33%;
+  }
+
+  .col-lg-6{
+    flex: 0 0 50%;
+    max-width: 50%; 
+  }
+
+  .col-lg-8{
+    flex: 0 0 66%;
+    max-width: 66%; 
+  }
+
 }
 
 
@@ -416,6 +555,118 @@ a{
   width: 180px;
   margin-left: .5rem;
   position: relative;
+}
+
+/* New Petto Page Styling */
+
+.project__container {
+  width: 70%;
+  margin: 100px auto;
+  /* border: 1px solid #5c5c5c; */
+  color: #fff;
+  padding: 120px 40px;
+  text-align: center;
+}
+
+.project__container-title h1{
+  color: #fff;
+  font-family: "GrandSlang Roman";
+  font-size: 140px;
+}
+
+.project__container-subtitle {
+  margin: 20px 0;
+  font-family: "Neue Montreal";
+  font-size: 16px;
+}
+
+.project__container-images {
+  position: relative;
+  width: 100%;
+  height: 2000px;
+  padding: 40px 0;
+}
+
+.project__image {
+  background: red;
+  width: 600px;
+  height: 500px;
+  margin: 40px auto;
+}
+
+.project__image-one {
+  background: url(/img/P1Thumbnail1.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project__image-two {
+  position: relative;
+  top: -100px;
+  left: -260px;
+  background: url(/img/P1Thumbnail2.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project__image-three {
+  position: relative;
+  left: 300px;
+  background: url(/img/P2Thumbnail3.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+/* .project__image-four {
+  position: relative;
+  top: -200px;
+  left: -100px;
+  background: url(../images/img-four.jpeg) no-repeat 50% 50%;
+  background-size: cover;
+} */
+
+.project-next-link {
+  position: relative;
+  top: -100px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-next-link a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "GrandSlang Roman";
+  font-size: 160px;
+}
+
+.anime-js-title .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+@media(max-width: 900px) {
+  .project__container-title h1 {
+      font-size: 40px;
+  }
+
+  .project__container {
+      width: 80%;
+  }
+
+  .project__container-images {
+      width: 100%;
+      margin: 0 auto;
+  }
+
+  .project__image {
+      width: 90%;
+  }
+
+  .project__image-one, .project__image-two, .project__image-three, .project__image-four {
+      position: relative;
+      top: 0;
+      left: 0;
+  }
 }
 
 /*=============== HOME ===============*/
@@ -499,6 +750,104 @@ footer .box-contact{
   background-color: transparent;
 }
 
+/*--------------- footer section --------------- */
+.collab {
+  text-align: right;
+}
+
+.collab p {
+  font-weight: lighter !important;
+  margin-bottom: 20px;
+}
+
+.hr {
+  background: rgba(255, 255, 255, 0.2);
+  height: 1px;
+}
+
+.info h4 {
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.info p {
+  color: grey;
+  font-weight: lighter;
+}
+
+.info li {
+  font-weight: lighter;
+  color: #fff;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+#fb::before {
+  display: inline-block;
+  content: '';
+  border-radius: 100%;
+  height: 4px;
+  width: 4px;
+  margin-right: 6px;
+  background: #3b5998;
+}
+
+
+#ig::before {
+  display: inline-block;
+  content: '';
+  border-radius: 100%;
+  height: 4px;
+  width: 4px;
+  margin-right: 6px;
+  background: #fcaf45;
+}
+
+
+#tw::before {
+  display: inline-block;
+  content: '';
+  border-radius: 100%;
+  height: 4px;
+  width: 4px;
+  margin-right: 6px;
+  background: #55acee;
+}
+
+
+#yt::before {
+  display: inline-block;
+  content: '';
+  border-radius: 100%;
+  height: 4px;
+  width: 4px;
+  margin-right: 6px;
+  background: #c4302b;
+}
+
+#media, #address {
+  text-align: right;
+}
+
+#media ul {
+  list-style: none;
+}
+
+#media ul li {
+  display: inline-block;
+}
+
+@media(max-width: 768px) {
+  .collab, #personal, #media, #address {
+        text-align: center;
+  }
+
+  .info ul {
+        margin: 0 0 0 -22px;
+        padding: 0;
+  }
+}
+
 .contact-email{
   border:2px solid;
   border-image-source: linear-gradient(51.06deg, #9358F7 0.87%, #9259F7 7.31%, #8E5DF6 13.75%, #8862F5 20.19%, #806BF4 26.63%, #7575F2 33.07%, #6882F0 39.51%, #5990EE 45.95%, #4A9FEB 52.39%, #3BADE9 58.84%, #2EBAE7 65.28%, #23C4E5 71.72%, #1BCDE4 78.16%, #15D2E3 84.6%, #11D6E2 91.04%, #10D7E2 97.48%);
@@ -534,11 +883,11 @@ footer .box-contact{
 
 /* Media Queries */
 
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
 
   /* Base */
 
-  .container, .container-medium, .container-medium-petto{
+  .container, .container-medium, .container-medium-petto, .container-medium-project{
     margin-left: auto;
     margin-right: auto;
   }
@@ -574,7 +923,7 @@ footer .box-contact{
     text-align: justify;
   }
 
-  /* Experince */
+  /* Experience */
   .accordion-experience{
     width: 100%;
     color: #6cace4;
@@ -634,6 +983,10 @@ footer .box-contact{
   .project:hover img{
     transform: scale(1.02)
   }
+
+  .whitespace {
+    display: none;
+}
 
 
   /* Petto */
