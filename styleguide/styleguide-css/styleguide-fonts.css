@@ -1,0 +1,29 @@
+/*
+    Here we are declaring our fonts for this page
+*/
+
+/*
+    Import Font below here
+*/
+@import url('https://fonts.googleapis.com/css2?family=Domine&family=Nunito+Sans:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+/* 
+font-family: 'Inter', serif;
+font-family: 'Poppins', serif; 
+*/
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/Clara/ClaraAntiqua.otf');
+}
